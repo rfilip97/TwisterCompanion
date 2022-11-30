@@ -1,18 +1,18 @@
 <script>
+	import { Card } from 'flowbite-svelte';
+
 	export let side = 'right';
 
 	const foot = '🦶';
 </script>
 
-<p class="foot {side === 'left' ? 'leftFoot' : ''}">{foot}</p>
+<Card padding="sm">
+	<div class="flex justify-center">
+		<p class="text-9xl {side === 'left' ? 'leftFoot' : ''}">{foot}</p>
+	</div>
+</Card>
 
 <style>
-	.foot {
-		border: 1px solid black;
-		font-size: 10em;
-		width: max-content;
-	}
-
 	.leftFoot {
 		transform: rotateY(180deg);
 	}
