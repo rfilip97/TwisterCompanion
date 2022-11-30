@@ -1,19 +1,9 @@
 <script>
-	import { Card } from 'flowbite-svelte';
+	import Limb from './limb.svelte';
 
 	export let side = 'right';
 
-	const hand = '🫱';
+	const symbol = '🫱';
 </script>
 
-<Card padding="sm">
-	<div class="flex justify-center">
-		<p class="text-9xl {side === 'right' ? 'rightHand' : ''}">{hand}</p>
-	</div>
-</Card>
-
-<style>
-	.rightHand {
-		transform: rotateY(180deg);
-	}
-</style>
+<Limb {symbol} {side} />
