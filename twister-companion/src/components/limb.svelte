@@ -3,9 +3,10 @@
 
 	export let symbol;
 	export let side = 'right';
+	export let color = 'white';
 </script>
 
-<Card padding="sm">
+<Card padding="sm" {color}>
 	<div>
 		<p class="text-9xl {side === 'left' ? 'reversedSide' : ''}">{symbol}</p>
 	</div>

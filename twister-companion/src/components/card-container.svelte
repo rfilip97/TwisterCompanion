@@ -5,13 +5,13 @@
 
 <div class="grid h-screen place-items-center">
 	<div class="card-container ">
-		<Hand side="left" />
+		<Hand side="left" color="red" />
 	</div>
 </div>
 
 <style lang="scss">
 	.card-container {
-        position: relative;
+		position: relative;
 
 		&:hover {
 			transform: scale(0.7);
