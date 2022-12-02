@@ -4,23 +4,41 @@
 	export let data;
 	export let flipTimeout = 5;
 
-    const flipBackTimeout = 0.9;
+	const flipBackTimeout = 0.9;
 
 	$: flippedCard = true;
 
-	setInterval(async () => {
-		flippedCard = false;
+	const spin = (data) => {
+		const NbBodyParts = data.bodyParts.length;
+		const NbColors = data.colors.length;
 
-		await setTimeout(() => {
-			flippedCard = true;
-		}, flipBackTimeout * 1000);
-	}, flipTimeout * 1000);
+		const GetRandomIntegerUpTo = (max) => Math.floor(Math.random() * max);
+
+		return [GetRandomIntegerUpTo(NbBodyParts), GetRandomIntegerUpTo(NbColors)];
+	};
+
+	let [bodyPartIndex, colorIndex] = spin(data);
+
+	const startFlipping = () => {
+		setInterval(async () => {
+			flippedCard = false;
+
+			await setTimeout(() => {
+				[bodyPartIndex, colorIndex] = spin(data);
+			    }, flipBackTimeout * 1000);
+
+			await setTimeout(() => {
+				flippedCard = true;
+			}, flipBackTimeout * 1000);
+		}, flipTimeout * 1000);
+	};
+
+	startFlipping();
 </script>
 
 <FlipCard
-	symbol={data.bodyParts[0].symbol}
-	rotated={data.bodyParts[0].rotated}
-	color={data.colors[0]}
-	{flipTimeout}
+	symbol={data.bodyParts[bodyPartIndex].symbol}
+	rotated={data.bodyParts[bodyPartIndex].rotated}
+	color={data.colors[colorIndex]}
 	{flippedCard}
 />
