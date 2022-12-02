@@ -13,7 +13,7 @@
 	}, flipTimeout * 1000);
 </script>
 
-<div class="flip-card-container {flippedCard ? 'flipped-card ' : ''}">
+<div class="flip-card-container {flippedCard ? 'flipped-card' : ''}">
 	<div class="flip-card-wrapper">
 		<FlipCardContent {symbol} {rotated} {color} />
 	</div>

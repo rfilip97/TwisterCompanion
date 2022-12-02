@@ -6,7 +6,6 @@
 	.flip-card-face {
 		background-color: black;
 		color: white;
-		transform: rotateY(180deg);
 		border-radius: 25px;
 		position: absolute;
 		width: 100%;

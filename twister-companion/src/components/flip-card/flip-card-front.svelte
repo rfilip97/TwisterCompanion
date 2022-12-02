@@ -10,6 +10,7 @@
 <style>
 	.flip-card-front {
 		background-color: var(--color, 'white');
+		transform: rotateY(180deg);
 		color: black;
 		border-radius: 25px;
 		position: absolute;
