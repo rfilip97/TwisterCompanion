@@ -4,12 +4,13 @@
 	export let symbol;
 	export let rotated = false;
 	export let color = 'white';
+	export let flipTimeout = 2;
 
 	$: flippedCard = false;
 
 	setInterval(() => {
 		flippedCard = !flippedCard;
-	}, 2000);
+	}, flipTimeout * 1000);
 </script>
 
 <div class="flip-card-container {flippedCard ? 'flipped-card ' : ''}">

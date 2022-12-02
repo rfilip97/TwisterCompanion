@@ -24,6 +24,8 @@
 		],
 		colors: ['red', 'yellow', 'green', 'blue']
 	};
+
+	const flipTimeout = 2;
 </script>
 
 <div class="grid h-screen place-items-center">
@@ -31,5 +33,6 @@
 		symbol={data.bodyParts[0].symbol}
 		rotated={data.bodyParts[0].rotated}
 		color={data.colors[0]}
+		{flipTimeout}
 	/>
 </div>
