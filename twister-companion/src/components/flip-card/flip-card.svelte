@@ -3,6 +3,7 @@
 
 	export let symbol;
 	export let rotated = false;
+	export let color = 'white';
 
 	$: flippedCard = false;
 
@@ -13,7 +14,7 @@
 
 <div class="flip-card-container {flippedCard ? 'flipped-card ' : ''}">
 	<div class="flip-card-wrapper">
-		<FlipCardContent {symbol} {rotated}/>
+		<FlipCardContent {symbol} {rotated} {color} />
 	</div>
 </div>
 

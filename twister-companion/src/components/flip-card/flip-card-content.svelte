@@ -4,7 +4,8 @@
 
 	export let symbol;
 	export let rotated = false;
+	export let color = 'white';
 </script>
 
-<FlipCardFront {symbol} {rotated} />
+<FlipCardFront {symbol} {rotated} --color={color} />
 <FlipCardBack />

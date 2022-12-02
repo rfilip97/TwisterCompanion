@@ -9,7 +9,7 @@
 
 <style>
 	.flip-card-front {
-		background-color: rgb(255, 0, 0);
+		background-color: var(--color, 'white');
 		color: black;
 		border-radius: 25px;
 		position: absolute;

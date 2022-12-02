@@ -1,28 +1,35 @@
 <script>
 	import FlipCard from './flip-card/flip-card.svelte';
 
-	const data = [
-		{
-			name: 'leftArm',
-			symbol: '✋'
-		},
-		{
-			name: 'rightArm',
-			symbol: '✋',
-			rotated: true
-		},
-		{
-			name: 'leftFoot',
-			symbol: '🦶',
-			rotated: true
-		},
-		{
-			name: 'rightFoot',
-			symbol: '🦶'
-		},
-	]
+	const data = {
+		bodyParts: [
+			{
+				name: 'leftArm',
+				symbol: '✋'
+			},
+			{
+				name: 'rightArm',
+				symbol: '✋',
+				rotated: true
+			},
+			{
+				name: 'leftFoot',
+				symbol: '🦶',
+				rotated: true
+			},
+			{
+				name: 'rightFoot',
+				symbol: '🦶'
+			}
+		],
+		colors: ['red', 'yellow', 'green', 'blue']
+	};
 </script>
 
 <div class="grid h-screen place-items-center">
-	<FlipCard symbol={data[0].symbol} rotated={data[0].rotated}/>
+	<FlipCard
+		symbol={data.bodyParts[0].symbol}
+		rotated={data.bodyParts[0].rotated}
+		color={data.colors[0]}
+	/>
 </div>
