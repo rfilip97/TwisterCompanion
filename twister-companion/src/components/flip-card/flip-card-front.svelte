@@ -4,7 +4,7 @@
 </script>
 
 <div class="flip-card-front flip-card-face">
-	<p class="text-9xl py-7 {rotated ? 'rotated-symbol' : ''}">{symbol}</p>
+	<p class="text-9xl py-9 {rotated ? 'rotated-symbol' : ''}">{symbol}</p>
 </div>
 
 <style>
