@@ -1,5 +1,5 @@
 <script>
-	import FlipCard from './flip-card/flip-card.svelte';
+	import CardFlipper from './card-flipper.svelte';
 
 	const data = {
 		bodyParts: [
@@ -29,10 +29,5 @@
 </script>
 
 <div class="grid h-screen place-items-center">
-	<FlipCard
-		symbol={data.bodyParts[0].symbol}
-		rotated={data.bodyParts[0].rotated}
-		color={data.colors[0]}
-		{flipTimeout}
-	/>
+	<CardFlipper {data} {flipTimeout} />
 </div>

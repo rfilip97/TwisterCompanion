@@ -4,17 +4,7 @@
 	export let symbol;
 	export let rotated = false;
 	export let color = 'white';
-	export let flipTimeout = 2;
-
-	$: flippedCard = true;
-
-	setInterval(async () => {
-		flippedCard = false;
-
-		await setTimeout(() => {
-			flippedCard = true;
-		},900);
-	}, flipTimeout * 1000);
+	export let flippedCard = true;
 </script>
 
 <div class="flip-card-container {flippedCard ? 'flipped-card' : ''}">
