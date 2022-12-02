@@ -1,11 +1,13 @@
 <script>
-	import Hand from './hand.svelte';
-	import Foot from './foot.svelte';
+	import LeftHand from './left-hand.svelte';
+    import RightHand from './right-hand.svelte';
+    import LeftFoot from './left-foot.svelte';
+    import RightFoot from './right-foot.svelte';
 </script>
 
 <div class="grid h-screen place-items-center">
 	<div class="card-container ">
-		<Hand side="left" color="red" />
+		<RightFoot side="left" color="red" />
 	</div>
 </div>
 
