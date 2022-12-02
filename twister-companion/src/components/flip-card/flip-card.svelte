@@ -1,6 +1,9 @@
 <script>
 	import FlipCardContent from './flip-card-content.svelte';
 
+	export let symbol;
+	export let rotated = false;
+
 	$: flippedCard = false;
 
 	setInterval(() => {
@@ -10,7 +13,7 @@
 
 <div class="flip-card-container {flippedCard ? 'flipped-card ' : ''}">
 	<div class="flip-card-wrapper">
-		<FlipCardContent />
+		<FlipCardContent {symbol} {rotated}/>
 	</div>
 </div>
 
