@@ -25,7 +25,7 @@
 		colors: ['red', 'yellow', 'green', 'blue']
 	};
 
-	const flipTimeout = 2;
+	const flipTimeout = 5;
 </script>
 
 <div class="grid h-screen place-items-center">

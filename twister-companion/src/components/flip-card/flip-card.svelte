@@ -6,10 +6,14 @@
 	export let color = 'white';
 	export let flipTimeout = 2;
 
-	$: flippedCard = false;
+	$: flippedCard = true;
 
-	setInterval(() => {
-		flippedCard = !flippedCard;
+	setInterval(async () => {
+		flippedCard = false;
+
+		await setTimeout(() => {
+			flippedCard = true;
+		},900);
 	}, flipTimeout * 1000);
 </script>
 
