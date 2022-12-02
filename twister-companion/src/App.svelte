@@ -1,9 +1,5 @@
 <script>
-	import Hand from './components/hand.svelte';
-	import Foot from './components/foot.svelte';
+	import CardContainer from "./components/card-container.svelte";
 </script>
 
-<Hand side="right" />
-<Hand side="left" />
-<Foot side="right" />
-<Foot side="left" />
+<CardContainer />

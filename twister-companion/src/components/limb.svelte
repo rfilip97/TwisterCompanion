@@ -1,12 +1,12 @@
 <script>
 	import { Card } from 'flowbite-svelte';
 
-    export let symbol;
+	export let symbol;
 	export let side = 'right';
 </script>
 
 <Card padding="sm">
-	<div class="flex justify-center">
+	<div>
 		<p class="text-9xl {side === 'left' ? 'reversedSide' : ''}">{symbol}</p>
 	</div>
 </Card>
