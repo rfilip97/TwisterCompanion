@@ -24,10 +24,8 @@
 		],
 		colors: ['red', 'yellow', 'green', 'blue']
 	};
-
-	const flipTimeout = 5;
 </script>
 
 <div class="grid h-screen place-items-center">
-	<CardFlipper {data} {flipTimeout} />
+	<CardFlipper {data} />
 </div>

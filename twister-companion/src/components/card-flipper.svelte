@@ -1,8 +1,9 @@
 <script>
 	import FlipCard from './flip-card/flip-card.svelte';
 
+	import { timeout } from '../stores/timeout-store';
+
 	export let data;
-	export let flipTimeout = 5;
 
 	const flipBackTimeout = 0.9;
 
@@ -25,12 +26,12 @@
 
 			await setTimeout(() => {
 				[bodyPartIndex, colorIndex] = spin(data);
-			    }, flipBackTimeout * 1000);
+			}, flipBackTimeout * 1000);
 
 			await setTimeout(() => {
 				flippedCard = true;
 			}, flipBackTimeout * 1000);
-		}, flipTimeout * 1000);
+		}, $timeout * 1000);
 	};
 
 	startFlipping();

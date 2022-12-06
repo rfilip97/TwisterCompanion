@@ -2,6 +2,8 @@
 	import ButtonSettings from '../button-options/button-settings.svelte';
 	import { Button, Modal, Label, Input, Checkbox } from 'flowbite-svelte';
 
+    import { timeout } from '../../stores/timeout-store';
+
 	let open = false;
 </script>
 
@@ -17,7 +19,7 @@
 			<div class="flex flex-col space-y-2 w-full">
 				<div class="flex flex-row items-center">
 					<span class="w-40">Flip delay</span>
-					<Input type="text" name="flip-delay" placeholder="5" />
+					<Input type="text" name="flip-delay" placeholder={$timeout} />
 				</div>
 
 				<div class="flex flex-row items-center">
