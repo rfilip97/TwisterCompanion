@@ -26,11 +26,11 @@
 		clear = setInterval(async () => {
 			flippedCard = false;
 
-			await setTimeout(() => {
+			setTimeout(() => {
 				[bodyPartIndex, colorIndex] = spin(data);
 			}, flipBackTimeout * 1000);
 
-			await setTimeout(() => {
+			setTimeout(() => {
 				flippedCard = true;
 			}, flipBackTimeout * 1000);
 		}, $flipTimeout * 1000);
