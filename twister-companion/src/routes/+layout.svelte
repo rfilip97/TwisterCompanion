@@ -1,12 +1,10 @@
 <script>
 	import '../app.postcss';
+	import ButtonSettings from '../components/button-settings/button-settings.svelte';
 </script>
 
 <div class="header flex flex-row justify-end gap-1 mr-4 mt-4">
-	<button
-		type="button"
-		class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-2.5 mr-2 mb-1 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-	>
+	<ButtonSettings>
 		<svg
 			class="w-6 h-6"
 			fill="none"
@@ -20,12 +18,9 @@
 				d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
 			/></svg
 		>
-	</button>
+	</ButtonSettings>
 
-	<button
-		type="button"
-		class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-2.5 mr-2 mb-1 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-	>
+	<ButtonSettings>
 		<svg
 			class="w-6 h-6"
 			fill="none"
@@ -44,7 +39,7 @@
 				d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
 			/></svg
 		>
-	</button>
+	</ButtonSettings>
 </div>
 
 <slot />
