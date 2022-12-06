@@ -4,7 +4,7 @@
 
 <style>
 	.flip-card-face {
-		background-color: black;
+		background-image: linear-gradient(45deg, red, yellow);
 		color: white;
 		border-radius: 25px;
 		position: absolute;
