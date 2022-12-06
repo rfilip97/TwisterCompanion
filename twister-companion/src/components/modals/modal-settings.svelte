@@ -1,10 +1,11 @@
 <script>
 	import ButtonSettings from '../button-options/button-settings.svelte';
-	import { Button, Modal, Label, Input, Checkbox } from 'flowbite-svelte';
+	import { Button, Modal, Input } from 'flowbite-svelte';
 
-    import { flipTimeout } from '../../stores/flip-timeout-store';
+	import { flipTimeout } from '../../stores/flip-timeout-store';
 
 	let open = false;
+	let enteredFlipTimeout = '';
 </script>
 
 <ButtonSettings
@@ -19,7 +20,12 @@
 			<div class="flex flex-col space-y-2 w-full">
 				<div class="flex flex-row items-center">
 					<span class="w-40">Flip delay</span>
-					<Input type="text" name="flip-delay" placeholder={$flipTimeout} />
+					<Input
+						bind:value={enteredFlipTimeout}
+						type="text"
+						name="flip-delay"
+						placeholder={$flipTimeout}
+					/>
 				</div>
 
 				<div class="flex flex-row items-center">
@@ -30,7 +36,13 @@
 		</div>
 
 		<div class="text-center mt-10">
-			<Button>Apply</Button>
+			<Button
+				on:click={() => {
+					flipTimeout.set(enteredFlipTimeout);
+				}}
+			>
+				Apply
+			</Button>
 		</div>
 	</form>
 </Modal>

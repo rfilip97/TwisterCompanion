@@ -20,8 +20,10 @@
 
 	let [bodyPartIndex, colorIndex] = spin(data);
 
-	const startFlipping = () => {
-		setInterval(async () => {
+	let clear;
+	$: {
+		clearInterval(clear);
+		clear = setInterval(async () => {
 			flippedCard = false;
 
 			await setTimeout(() => {
@@ -32,9 +34,7 @@
 				flippedCard = true;
 			}, flipBackTimeout * 1000);
 		}, $flipTimeout * 1000);
-	};
-
-	startFlipping();
+	}
 </script>
 
 <FlipCard
