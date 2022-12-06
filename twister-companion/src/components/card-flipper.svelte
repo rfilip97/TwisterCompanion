@@ -1,7 +1,7 @@
 <script>
 	import FlipCard from './flip-card/flip-card.svelte';
 
-	import { timeout } from '../stores/timeout-store';
+	import { flipTimeout } from '../stores/flip-timeout-store';
 
 	export let data;
 
@@ -31,7 +31,7 @@
 			await setTimeout(() => {
 				flippedCard = true;
 			}, flipBackTimeout * 1000);
-		}, $timeout * 1000);
+		}, $flipTimeout * 1000);
 	};
 
 	startFlipping();
