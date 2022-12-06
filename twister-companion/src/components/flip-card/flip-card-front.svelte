@@ -18,6 +18,7 @@
 		height: 100%;
 		backface-visibility: hidden;
 		box-shadow: 5px 3px 5px gray;
+		border: 15px solid rgba(255,255,255,.5);
 	}
 
 	.rotated-symbol {
