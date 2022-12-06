@@ -1,4 +1,4 @@
-<div class="flip-card-back flip-card-face">
+<div class="flip-card-back flip-card-face grid content-start md:content-around">
 	<p class="text-7xl py-14">Twister</p>
 </div>
 

@@ -3,8 +3,8 @@
 	export let rotated = false;
 </script>
 
-<div class="flip-card-front flip-card-face">
-	<p class="text-9xl py-9 text {rotated ? 'rotated-symbol' : ''}">{symbol}</p>
+<div class="flip-card-front flip-card-face grid content-start md:content-around">
+	<p class="text-9xl text {rotated ? 'rotated-symbol' : ''}">{symbol}</p>
 </div>
 
 <style>

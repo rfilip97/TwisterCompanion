@@ -16,8 +16,8 @@
 <style>
 	.flip-card-container {
 		background-color: transparent;
-		width: 300px;
-		height: 200px;
+		width: 400px;
+		height: 250px;
 		perspective: 1000px;
 	}
 
