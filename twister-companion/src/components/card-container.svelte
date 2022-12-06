@@ -14,12 +14,12 @@
 			},
 			{
 				name: 'leftFoot',
-				symbol: '🦶',
+				symbol: '👟',
 				rotated: true
 			},
 			{
 				name: 'rightFoot',
-				symbol: '🦶'
+				symbol: '👟'
 			}
 		],
 		colors: ['red', 'yellow', 'green', 'blue']
