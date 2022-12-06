@@ -4,7 +4,7 @@
 	import ButtonSound from '../components/button-options/button-sound.svelte';
 </script>
 
-<div class="header flex flex-row justify-end gap-1 mr-4 mt-4">
+<div class="header flex flex-row justify-end gap-3 mr-4 mt-4">
 	<ButtonSound />
 	<ButtonSettings />
 </div>
