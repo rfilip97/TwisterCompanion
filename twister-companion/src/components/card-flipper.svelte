@@ -18,22 +18,33 @@
 		return [GetRandomIntegerUpTo(NbBodyParts), GetRandomIntegerUpTo(NbColors)];
 	};
 
+	const isTimeoutValid = (timeout) => {
+		if (typeof timeout === 'number' && timeout > 0 && timeout < 200) {
+			return true;
+		}
+
+		return false;
+	};
+
 	let [bodyPartIndex, colorIndex] = spin(data);
 
 	let clear;
 	$: {
 		clearInterval(clear);
-		clear = setInterval(async () => {
-			flippedCard = false;
+		clear = setInterval(
+			async () => {
+				flippedCard = false;
 
-			setTimeout(() => {
-				[bodyPartIndex, colorIndex] = spin(data);
-			}, flipBackTimeout * 1000);
+				setTimeout(() => {
+					[bodyPartIndex, colorIndex] = spin(data);
+				}, flipBackTimeout * 1000);
 
-			setTimeout(() => {
-				flippedCard = true;
-			}, flipBackTimeout * 1000);
-		}, $flipTimeout * 1000);
+				setTimeout(() => {
+					flippedCard = true;
+				}, flipBackTimeout * 1000);
+			},
+			isTimeoutValid($flipTimeout) ? $flipTimeout * 1000 : 5000
+		);
 	}
 </script>
 

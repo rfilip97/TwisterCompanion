@@ -38,7 +38,7 @@
 		<div class="text-center mt-10">
 			<Button
 				on:click={() => {
-					flipTimeout.set(enteredFlipTimeout);
+					flipTimeout.set(+enteredFlipTimeout);
 				}}
 			>
 				Apply
