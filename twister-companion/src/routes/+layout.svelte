@@ -9,9 +9,9 @@
 
 <div class="header flex flex-row justify-end gap-3 mr-4 mt-4">
 	{#if $config.muted}
-		<ButtonMuted />
+		<ButtonMuted onClick={config.toggleMuted} />
 	{:else}
-		<ButtonSound />
+		<ButtonSound onClick={config.toggleMuted} />
 	{/if}
 
 	<ModalSettings />
