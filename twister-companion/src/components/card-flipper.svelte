@@ -1,7 +1,7 @@
 <script>
 	import FlipCard from './flip-card/flip-card.svelte';
 
-	import { flipTimeout } from '../stores/flip-timeout-store';
+	import { config } from '../stores/config-store';
 
 	export let data;
 
@@ -43,7 +43,7 @@
 					flippedCard = true;
 				}, flipBackTimeout * 1000);
 			},
-			isTimeoutValid($flipTimeout) ? $flipTimeout * 1000 : 5000
+			isTimeoutValid($config.flipTimeout) ? $config.flipTimeout * 1000 : 5000
 		);
 	}
 </script>

@@ -2,7 +2,7 @@
 	import ButtonSettings from '../button-options/button-settings.svelte';
 	import { Button, Modal, Input } from 'flowbite-svelte';
 
-	import { flipTimeout } from '../../stores/flip-timeout-store';
+	import { config } from '../../stores/config-store';
 
 	let open = false;
 	let enteredFlipTimeout = '';
@@ -24,7 +24,7 @@
 						bind:value={enteredFlipTimeout}
 						type="text"
 						name="flip-delay"
-						placeholder={$flipTimeout}
+						placeholder={$config.flipTimeout}
 					/>
 				</div>
 
@@ -38,7 +38,7 @@
 		<div class="text-center mt-10">
 			<Button
 				on:click={() => {
-					flipTimeout.set(+enteredFlipTimeout);
+					config.setFlipTimeout(+enteredFlipTimeout);
 				}}
 			>
 				Apply
