@@ -7,11 +7,11 @@
 		return false;
 	};
 
+	const GetRandomIntegerUpTo = (max) => Math.floor(Math.random() * max);
+
 	export const spin = ({ bodyParts, colors }) => {
 		const NbBodyParts = bodyParts.length;
 		const NbColors = colors.length;
-
-		const GetRandomIntegerUpTo = (max) => Math.floor(Math.random() * max);
 
 		return [GetRandomIntegerUpTo(NbBodyParts), GetRandomIntegerUpTo(NbColors)];
 	};
