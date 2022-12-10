@@ -1,7 +1,7 @@
 <script>
-	import FlipCard from './flip-card/flip-card.svelte';
+	import FlipCard from '../flip-card/flip-card.svelte';
 
-	import { config } from '../stores/config-store';
+	import { config } from '../../stores/config-store';
 
 	export let data;
 

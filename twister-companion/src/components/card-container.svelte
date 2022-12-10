@@ -1,5 +1,5 @@
 <script>
-	import CardFlipper from './card-flipper.svelte';
+	import CardFlipper from './card-flipper/card-flipper.svelte';
 
 	const data = {
 		bodyParts: [
