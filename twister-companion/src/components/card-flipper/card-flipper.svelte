@@ -2,6 +2,7 @@
 	import FlipCard from '../flip-card/flip-card.svelte';
 
 	import { config } from '../../stores/config-store';
+	import { isTimeoutValid } from './utils.svelte';
 
 	export let data;
 
@@ -16,14 +17,6 @@
 		const GetRandomIntegerUpTo = (max) => Math.floor(Math.random() * max);
 
 		return [GetRandomIntegerUpTo(NbBodyParts), GetRandomIntegerUpTo(NbColors)];
-	};
-
-	const isTimeoutValid = (timeout) => {
-		if (typeof timeout === 'number' && timeout > 0 && timeout < 200) {
-			return true;
-		}
-
-		return false;
 	};
 
 	let [bodyPartIndex, colorIndex] = spin(data);
