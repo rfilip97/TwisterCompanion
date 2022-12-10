@@ -2,22 +2,13 @@
 	import FlipCard from '../flip-card/flip-card.svelte';
 
 	import { config } from '../../stores/config-store';
-	import { isTimeoutValid } from './utils.svelte';
+	import { isTimeoutValid, spin } from './utils.svelte';
 
 	export let data;
 
 	const flipBackTimeout = 0.9;
 
 	$: flippedCard = true;
-
-	const spin = (data) => {
-		const NbBodyParts = data.bodyParts.length;
-		const NbColors = data.colors.length;
-
-		const GetRandomIntegerUpTo = (max) => Math.floor(Math.random() * max);
-
-		return [GetRandomIntegerUpTo(NbBodyParts), GetRandomIntegerUpTo(NbColors)];
-	};
 
 	let [bodyPartIndex, colorIndex] = spin(data);
 
