@@ -7,9 +7,9 @@
 		return false;
 	};
 
-	export const spin = (data) => {
-		const NbBodyParts = data.bodyParts.length;
-		const NbColors = data.colors.length;
+	export const spin = ({ bodyParts, colors }) => {
+		const NbBodyParts = bodyParts.length;
+		const NbColors = colors.length;
 
 		const GetRandomIntegerUpTo = (max) => Math.floor(Math.random() * max);
 
