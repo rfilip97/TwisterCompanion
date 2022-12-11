@@ -5,8 +5,10 @@
 	import ModalSettings from '../components/modals/modal-settings.svelte';
 
 	import { config } from '../stores/config-store';
+	import Menu from '../components/menu/menu.svelte';
 </script>
 
+<Menu />
 <div class="header flex flex-row justify-end gap-3 mr-4 mt-4">
 	{#if $config.muted}
 		<ButtonMuted onClick={config.toggleMuted} />
