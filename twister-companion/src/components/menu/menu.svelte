@@ -1,5 +1,5 @@
 <script>
-	import { Drawer, Button, CloseButton } from 'flowbite-svelte';
+	import { Drawer, Button, Card, CloseButton } from 'flowbite-svelte';
 	import { sineIn } from 'svelte/easing';
 
 	let hidden1 = true;
@@ -41,8 +41,51 @@
 	</div>
 	<div>
 		<div class="flex flex-col">
-			<a href="/">Play</a>
-			<a href="/about">About</a>
+			<!-- <Button class="rounded-b-none" gradient color="pinkToOrange" href="/">Play</Button>
+			<Button class="rounded-none" gradient color="pinkToOrange" href="/about">About</Button>
+			<Button class="rounded-t-none" gradient color="pinkToOrange" disabled>None</Button> -->
+
+			<div>
+				<Card href="/" horizontal>
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+						/>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+						/>
+					</svg>
+					<p class="ml-2">Play</p>
+				</Card>
+
+				<Card href="/about" horizontal>
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+						/></svg
+					>
+					<p class="ml-2">About</p>
+				</Card>
+			</div>
 		</div>
 	</div>
 </Drawer>
