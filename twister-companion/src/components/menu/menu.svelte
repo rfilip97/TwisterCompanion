@@ -11,7 +11,22 @@
 </script>
 
 <div>
-	<Button on:click={() => (hidden1 = false)}>Show drawer</Button>
+	<Button class="border-0" color="light" on:click={() => (hidden1 = false)}
+		><svg
+			class="w-6 h-6"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M4 6h16M4 12h16M4 18h16"
+			/>
+		</svg>
+	</Button>
 </div>
 
 <Drawer transitionType="fly" {transitionParams} bind:hidden={hidden1} id="sidebar1">
