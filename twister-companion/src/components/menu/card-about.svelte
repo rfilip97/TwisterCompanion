@@ -1,8 +1,8 @@
 <script>
-	import { Card } from 'flowbite-svelte';
+	import MenuCard from './menu-card.svelte';
 </script>
 
-<Card href="/about" horizontal>
+<MenuCard route="/about" label="About">
 	<svg
 		class="w-6 h-6"
 		fill="none"
@@ -16,5 +16,4 @@
 			d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 		/></svg
 	>
-	<p class="ml-2">About</p>
-</Card>
+</MenuCard>

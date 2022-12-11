@@ -1,8 +1,11 @@
 <script>
-	import MenuCard from './menu-card.svelte';
+	import { Card } from 'flowbite-svelte';
+
+	export let route;
+	export let label;
 </script>
 
-<MenuCard route="/" label="Play">
+<Card href={route} horizontal>
 	<svg
 		class="w-6 h-6"
 		fill="none"
@@ -22,4 +25,5 @@
 			d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 		/>
 	</svg>
-</MenuCard>
+	<p class="ml-2">{label}</p>
+</Card>
