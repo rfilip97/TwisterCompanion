@@ -41,10 +41,6 @@
 	</div>
 	<div>
 		<div class="flex flex-col">
-			<!-- <Button class="rounded-b-none" gradient color="pinkToOrange" href="/">Play</Button>
-			<Button class="rounded-none" gradient color="pinkToOrange" href="/about">About</Button>
-			<Button class="rounded-t-none" gradient color="pinkToOrange" disabled>None</Button> -->
-
 			<div>
 				<Card href="/" horizontal>
 					<svg
