@@ -5,7 +5,9 @@
 	import Options from '../components/options/options.svelte';
 </script>
 
-<Menu />
-<Options />
+<div class="flex justify-between content-center">
+	<Menu />
+	<Options />
+</div>
 
 <slot />
